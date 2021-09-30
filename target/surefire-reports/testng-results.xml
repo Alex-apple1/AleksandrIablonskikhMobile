@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Native mobile testing Suite" duration-ms="612" started-at="2021-09-30T17:19:54 MSK" finished-at="2021-09-30T17:19:55 MSK">
+    <groups>
+      <group name="native">
+        <method signature="nativeMobileTests.simpleNativeTest()[pri:0, instance:scenarios.nativeMobileTests@7b49cea0]" name="simpleNativeTest" class="scenarios.nativeMobileTests"/>
+      </group> <!-- native -->
+    </groups>
+    <test name="Native tests" duration-ms="612" started-at="2021-09-30T17:19:54 MSK" finished-at="2021-09-30T17:19:55 MSK">
+      <class name="scenarios.nativeMobileTests">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:scenarios.nativeMobileTests@7b49cea0]" name="setUp" is-config="true" duration-ms="16013" started-at="2021-09-30T17:19:38 MSK" finished-at="2021-09-30T17:19:54 MSK">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Android]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[native]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[emulator-5554]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[./src/main/resources/EPAMTestApp.apk]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="simpleNativeTest()[pri:0, instance:scenarios.nativeMobileTests@7b49cea0]" name="simpleNativeTest" duration-ms="574" started-at="2021-09-30T17:19:54 MSK" description="This simple test just click on the Sign In button" finished-at="2021-09-30T17:19:55 MSK">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- simpleNativeTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:scenarios.nativeMobileTests@7b49cea0]" name="tearDown" is-config="true" duration-ms="274" started-at="2021-09-30T17:19:55 MSK" finished-at="2021-09-30T17:19:55 MSK">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- scenarios.nativeMobileTests -->
+    </test> <!-- Native tests -->
+  </suite> <!-- Native mobile testing Suite -->
+</testng-results>
