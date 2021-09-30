@@ -24,11 +24,6 @@
         <option value="native" />
       </list>
     </option>
-    <option name="disabledProfiles">
-      <list>
-        <option value="web" />
-      </list>
-    </option>
   </component>
   <component name="ProjectId" id="1yqxFu94opLQZJDp8LZin16T3rr" />
   <component name="ProjectViewState">
