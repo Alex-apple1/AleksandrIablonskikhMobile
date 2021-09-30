@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
+<testng-results skipped="0" failed="0" ignored="4" total="5" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Native mobile testing Suite" duration-ms="612" started-at="2021-09-30T17:19:54 MSK" finished-at="2021-09-30T17:19:55 MSK">
+  <suite name="Web mobile testing Suite" duration-ms="3769" started-at="2021-09-30T17:30:31 MSK" finished-at="2021-09-30T17:30:35 MSK">
     <groups>
-      <group name="native">
-        <method signature="nativeMobileTests.simpleNativeTest()[pri:0, instance:scenarios.nativeMobileTests@7b49cea0]" name="simpleNativeTest" class="scenarios.nativeMobileTests"/>
-      </group> <!-- native -->
+      <group name="web">
+        <method signature="webMobileTests.simpleWebTest()[pri:0, instance:scenarios.webMobileTests@610694f1]" name="simpleWebTest" class="scenarios.webMobileTests"/>
+      </group> <!-- web -->
     </groups>
-    <test name="Native tests" duration-ms="612" started-at="2021-09-30T17:19:54 MSK" finished-at="2021-09-30T17:19:55 MSK">
+    <test name="Web tests" duration-ms="3769" started-at="2021-09-30T17:30:31 MSK" finished-at="2021-09-30T17:30:35 MSK">
+      <class name="scenarios.webMobileTests">
+        <test-method status="PASS" signature="simpleWebTest()[pri:0, instance:scenarios.webMobileTests@610694f1]" name="simpleWebTest" duration-ms="3733" started-at="2021-09-30T17:30:31 MSK" description="Make sure that we&#039;ve opened IANA homepage" finished-at="2021-09-30T17:30:35 MSK">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- simpleWebTest -->
+      </class> <!-- scenarios.webMobileTests -->
       <class name="scenarios.nativeMobileTests">
-        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:scenarios.nativeMobileTests@7b49cea0]" name="setUp" is-config="true" duration-ms="16013" started-at="2021-09-30T17:19:38 MSK" finished-at="2021-09-30T17:19:54 MSK">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:scenarios.nativeMobileTests@7b49cea0]" name="setUp" is-config="true" duration-ms="16096" started-at="2021-09-30T17:30:15 MSK" finished-at="2021-09-30T17:30:31 MSK">
           <params>
             <param index="0">
               <value>
@@ -19,7 +25,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[native]]>
+                <![CDATA[web]]>
               </value>
             </param>
             <param index="2">
@@ -29,27 +35,23 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[]]>
+                <![CDATA[Chrome]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[./src/main/resources/EPAMTestApp.apk]]>
+                <![CDATA[]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="simpleNativeTest()[pri:0, instance:scenarios.nativeMobileTests@7b49cea0]" name="simpleNativeTest" duration-ms="574" started-at="2021-09-30T17:19:54 MSK" description="This simple test just click on the Sign In button" finished-at="2021-09-30T17:19:55 MSK">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- simpleNativeTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:scenarios.nativeMobileTests@7b49cea0]" name="tearDown" is-config="true" duration-ms="274" started-at="2021-09-30T17:19:55 MSK" finished-at="2021-09-30T17:19:55 MSK">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:scenarios.nativeMobileTests@7b49cea0]" name="tearDown" is-config="true" duration-ms="299" started-at="2021-09-30T17:30:35 MSK" finished-at="2021-09-30T17:30:35 MSK">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- scenarios.nativeMobileTests -->
-    </test> <!-- Native tests -->
-  </suite> <!-- Native mobile testing Suite -->
+    </test> <!-- Web tests -->
+  </suite> <!-- Web mobile testing Suite -->
 </testng-results>
