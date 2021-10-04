@@ -59,7 +59,7 @@ public class BaseTest implements IDriver {
 
     }
 
-    private void setPageObject(String appType, AppiumDriver appiumDriver) throws Exception {
+    protected void setPageObject(String appType, AppiumDriver appiumDriver) throws Exception {
         po = new PageObject(appType, appiumDriver);
     }
 

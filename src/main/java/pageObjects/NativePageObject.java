@@ -8,9 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class NativePageObject  {
 
-//    @AndroidFindBy(id = "platkovsky.alexey.epamtestapp:id/email_sign_in_button")
-//    WebElement signInBtn;
-
     @AndroidFindBy(id = "platkovsky.alexey.epamtestapp:id/email_sign_in_button")
     WebElement signInBtn;
     @AndroidFindBy(id = "platkovsky.alexey.epamtestapp:id/register_button")
@@ -40,8 +37,5 @@ public class NativePageObject  {
     public NativePageObject(AppiumDriver appiumDriver) {
         PageFactory.initElements( new AppiumFieldDecorator(appiumDriver), this);
     }
-
-
-
 
 }

@@ -1,19 +1,19 @@
 package pageObjects;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.pagefactory.AndroidFindBy;
+import java.util.List;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class WebPageObject  {
 
     final String searchData = "EPAM";
 
-    @AndroidFindBy(xpath = "//*[@name='q']")
+    @FindBy(xpath = "//*[@name='q']")
     WebElement googleSearchField;
-    @AndroidFindBy(xpath = "//*[@id='input']")
-    WebElement googleSearchButton;
-
+    @FindBy(xpath = "//div[@id='rso']/div")
+    List<WebElement> googleSearchResults;
 
     public WebPageObject(AppiumDriver appiumDriver) {
         PageFactory.initElements(appiumDriver, this);

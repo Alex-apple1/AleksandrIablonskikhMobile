@@ -1,16 +1,13 @@
 package scenarios;
 
+import data.DataProviders;
 import org.testng.annotations.Test;
 import setup.BaseTest;
 
 public class nativeMobileTests extends BaseTest {
 
-    //    @Test(groups = {"native"}, description = "This simple test just click on the Sign In button")
-    //    public void simpleNativeTest() throws NoSuchFieldException, IllegalAccessException, InstantiationException {
-    //        getPo().getWelement("signInBtn").click();
-    //        System.out.println("Simplest Android native test done");
-
-    @Test(groups = {"native"}, description = "Register to account test")
+    @Test(groups = {"native"}, description = "Register to account test",
+          dataProvider = "NativeTestDataProvider", dataProviderClass = DataProviders.class)
     public void registerToAccountTest() throws IllegalAccessException, NoSuchFieldException, InstantiationException {
 
         getPo().getWelement("registrationButton").click();
@@ -28,7 +25,8 @@ public class nativeMobileTests extends BaseTest {
         System.out.println("Registration is done");
     }
 
-    @Test(groups = {"native"}, description = "Sign in to account test")
+    @Test(groups = {"native"}, description = "Sign in to account test",
+          dataProvider = "NativeTestDataProvider", dataProviderClass = DataProviders.class)
     public void signInToAccountTest()
         throws IllegalAccessException, NoSuchFieldException, InstantiationException, InterruptedException {
 
@@ -37,8 +35,6 @@ public class nativeMobileTests extends BaseTest {
         getPo().getWelement("passwordField").sendKeys("alex1980");
 
         getPo().getWelement("signInBtn").click();
-
-        Thread.sleep(2000);
 
         System.out.println("Sign in is done");
 
