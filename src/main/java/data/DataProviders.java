@@ -3,6 +3,7 @@ package data;
 import org.testng.annotations.DataProvider;
 
 public class DataProviders {
+
     @DataProvider(name = "NativeTestDataProvider")
     public static Object[][] NativeTestDataProvider() {
         String email = "2000.1@mail.ru";
