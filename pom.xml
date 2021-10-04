@@ -13,6 +13,9 @@
     <testng.version>7.1.0</testng.version>
     <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+    <token>
+
+    </token>
   </properties>
 
   <dependencies>
@@ -41,7 +44,8 @@
             <suiteXmlFile>${suite.file}</suiteXmlFile>
           </suiteXmlFiles>
           <systemPropertyVariables>
-            <ts.appium>http://localhost:4723/wd/hub</ts.appium>
+            <!--            <ts.appium>http://localhost:4723/wd/hub</ts.appium>-->
+            <ts.appium>https://EPM-TSTF:${token}@mobilecloud.epam.com/wd/hub</ts.appium>
           </systemPropertyVariables>
         </configuration>
       </plugin>
@@ -75,6 +79,46 @@
       </activation>
       <properties>
         <suite.file>./src/test/resources/webTNG.xml</suite.file>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>AndroidCloudNative</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <properties>
+        <suite.file>./src/test/resources/androidCloudNativeTNG.xml</suite.file>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>AndroidCloudWeb</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <properties>
+        <suite.file>./src/test/resources/androidCloudWebTNG.xml</suite.file>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>IOSCloudNative</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <properties>
+        <suite.file>./src/test/resources/iOSCloudNativeTNG.xml</suite.file>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>IOSCloudWeb</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <properties>
+        <suite.file>./src/test/resources/iOSCloudWebTNG.xml</suite.file>
       </properties>
     </profile>
   </profiles>
