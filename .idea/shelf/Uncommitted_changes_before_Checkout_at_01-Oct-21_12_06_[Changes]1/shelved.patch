@@ -1,0 +1,78 @@
+Index: src/main/java/setup/BaseTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package setup;\r\n\r\nimport io.appium.java_client.AppiumDriver;\r\nimport org.openqa.selenium.remote.DesiredCapabilities;\r\nimport org.testng.annotations.*;\r\nimport pageObjects.PageObject;\r\n\r\nimport java.io.File;\r\nimport java.net.MalformedURLException;\r\nimport java.net.URL;\r\nimport java.util.concurrent.TimeUnit;\r\n\r\npublic class BaseTest implements IDriver {\r\n\r\n    private static AppiumDriver appiumDriver; // singleton\r\n    IPageObject po;\r\n\r\n    @Override\r\n    public AppiumDriver getDriver() { return appiumDriver; }\r\n\r\n    public IPageObject getPo() {\r\n        return po;\r\n    }\r\n\r\n    @Parameters({\"platformName\",\"appType\",\"deviceName\",\"browserName\",\"app\"})\r\n    @BeforeSuite(alwaysRun = true)\r\n    public void setUp(String platformName, String appType, String deviceName, @Optional(\"\") String browserName, @Optional(\"\") String app) throws Exception {\r\n        System.out.println(\"Before: app type - \"+appType);\r\n        setAppiumDriver(platformName, deviceName, browserName, app);\r\n        setPageObject(appType, appiumDriver);\r\n\r\n    }\r\n\r\n    @AfterSuite(alwaysRun = true)\r\n    public void tearDown() throws Exception {\r\n        System.out.println(\"After\");\r\n        appiumDriver.closeApp();\r\n    }\r\n\r\n    private void setAppiumDriver(String platformName, String deviceName, String browserName, String app){\r\n        DesiredCapabilities capabilities = new DesiredCapabilities();\r\n        //mandatory Android capabilities\r\n        capabilities.setCapability(\"platformName\",platformName);\r\n        capabilities.setCapability(\"deviceName\",deviceName);\r\n\r\n        if(app.endsWith(\".apk\")) capabilities.setCapability(\"app\", (new File(app)).getAbsolutePath());\r\n\r\n        capabilities.setCapability(\"browserName\", browserName);\r\n        capabilities.setCapability(\"chromedriverDisableBuildCheck\",\"true\");\r\n\r\n        try {\r\n            appiumDriver = new AppiumDriver(new URL(System.getProperty(\"ts.appium\")), capabilities);\r\n        } catch (MalformedURLException e) {\r\n            e.printStackTrace();\r\n        }\r\n\r\n        // Timeouts tuning\r\n        appiumDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);\r\n\r\n    }\r\n\r\n    private void setPageObject(String appType, AppiumDriver appiumDriver) throws Exception {\r\n        po = new PageObject(appType, appiumDriver);\r\n    }\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/setup/BaseTest.java b/src/main/java/setup/BaseTest.java
+--- a/src/main/java/setup/BaseTest.java	
++++ b/src/main/java/setup/BaseTest.java	
+@@ -16,19 +16,25 @@
+     IPageObject po;
+ 
+     @Override
+-    public AppiumDriver getDriver() { return appiumDriver; }
++    public AppiumDriver getDriver() {
++        return appiumDriver;
++    }
+ 
+     public IPageObject getPo() {
+         return po;
+     }
+ 
+-    @Parameters({"platformName","appType","deviceName","browserName","app"})
++    @Parameters({"platformName", "appType", "deviceName", "browserName", "app"})
+     @BeforeSuite(alwaysRun = true)
+-    public void setUp(String platformName, String appType, String deviceName, @Optional("") String browserName, @Optional("") String app) throws Exception {
+-        System.out.println("Before: app type - "+appType);
++    public void setUp(String platformName,
++                      String appType,
++                      String deviceName,
++                      @Optional("") String browserName,
++                      @Optional("") String app
++    ) throws Exception {
++        System.out.println("Before: app type - " + appType);
+         setAppiumDriver(platformName, deviceName, browserName, app);
+         setPageObject(appType, appiumDriver);
+-
+     }
+ 
+     @AfterSuite(alwaysRun = true)
+@@ -37,16 +43,18 @@
+         appiumDriver.closeApp();
+     }
+ 
+-    private void setAppiumDriver(String platformName, String deviceName, String browserName, String app){
++    private void setAppiumDriver(String platformName, String deviceName, String browserName, String app) {
+         DesiredCapabilities capabilities = new DesiredCapabilities();
+         //mandatory Android capabilities
+-        capabilities.setCapability("platformName",platformName);
+-        capabilities.setCapability("deviceName",deviceName);
++        capabilities.setCapability("platformName", platformName);
++        capabilities.setCapability("deviceName", deviceName);
+ 
+-        if(app.endsWith(".apk")) capabilities.setCapability("app", (new File(app)).getAbsolutePath());
++        if (app.endsWith(".apk")) {
++            capabilities.setCapability("app", (new File(app)).getAbsolutePath());
++        }
+ 
+         capabilities.setCapability("browserName", browserName);
+-        capabilities.setCapability("chromedriverDisableBuildCheck","true");
++        capabilities.setCapability("chromedriverDisableBuildCheck", "true");
+ 
+         try {
+             appiumDriver = new AppiumDriver(new URL(System.getProperty("ts.appium")), capabilities);
+@@ -56,12 +64,9 @@
+ 
+         // Timeouts tuning
+         appiumDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+-
+     }
+ 
+     private void setPageObject(String appType, AppiumDriver appiumDriver) throws Exception {
+         po = new PageObject(appType, appiumDriver);
+     }
+-
+-
+ }

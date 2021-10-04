@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: TestSuite
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 18.33 s <<< FAILURE! - in TestSuite
-simpleWebTest(scenarios.webMobileTests)  Time elapsed: 2.001 s  <<< FAILURE!
-java.lang.NullPointerException
-	at scenarios.webMobileTests.simpleWebTest(webMobileTests.java:26)
-
