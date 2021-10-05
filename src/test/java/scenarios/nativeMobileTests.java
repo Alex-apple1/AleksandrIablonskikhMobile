@@ -27,7 +27,7 @@ public class nativeMobileTests extends BaseTest {
 
     @Test(groups = {"native"}, description = "Sign in to account test",
           dataProvider = "NativeTestDataProvider", dataProviderClass = DataProviders.class)
-    public void signInToAccountTest(String email, String password)
+    public void signInToAccountTest(String email, String password, String username)
         throws IllegalAccessException, NoSuchFieldException, InstantiationException, InterruptedException {
 
         getPo().getWelement("loginEmailField").sendKeys(email);

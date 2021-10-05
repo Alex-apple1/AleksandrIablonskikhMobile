@@ -1,17 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="3" total="5" passed="0">
+<testng-results skipped="0" failed="0" ignored="4" total="5" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Native mobile testing Suite" duration-ms="40" started-at="2021-10-05T19:29:10 MSK" finished-at="2021-10-05T19:29:10 MSK">
+  <suite name="Web mobile testing Suite" duration-ms="8043" started-at="2021-10-05T20:39:58 MSK" finished-at="2021-10-05T20:40:06 MSK">
     <groups>
-      <group name="native">
-        <method signature="nativeMobileTests.registerToAccountTest()[pri:0, instance:scenarios.nativeMobileTests@887af79]" name="registerToAccountTest" class="scenarios.nativeMobileTests"/>
-        <method signature="nativeMobileTests.signInToAccountTest()[pri:0, instance:scenarios.nativeMobileTests@887af79]" name="signInToAccountTest" class="scenarios.nativeMobileTests"/>
-      </group> <!-- native -->
+      <group name="web">
+        <method signature="webMobileTests.webSearchTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:scenarios.webMobileTests@43814d18]" name="webSearchTest" class="scenarios.webMobileTests"/>
+      </group> <!-- web -->
     </groups>
-    <test name="Native tests" duration-ms="40" started-at="2021-10-05T19:29:10 MSK" finished-at="2021-10-05T19:29:10 MSK">
+    <test name="Web tests" duration-ms="8043" started-at="2021-10-05T20:39:58 MSK" finished-at="2021-10-05T20:40:06 MSK">
+      <class name="scenarios.webMobileTests">
+        <test-method status="PASS" signature="webSearchTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:scenarios.webMobileTests@43814d18]" name="webSearchTest" duration-ms="7990" started-at="2021-10-05T20:39:58 MSK" description="Google search test" data-provider="WebTestDataProvider" finished-at="2021-10-05T20:40:06 MSK">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[web]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.google.com/]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Google]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[EPAM]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webSearchTest -->
+      </class> <!-- scenarios.webMobileTests -->
       <class name="scenarios.nativeMobileTests">
-        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:scenarios.nativeMobileTests@887af79]" name="setUp" is-config="true" duration-ms="12856" started-at="2021-10-05T19:28:57 MSK" finished-at="2021-10-05T19:29:10 MSK">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:scenarios.nativeMobileTests@887af79]" name="setUp" is-config="true" duration-ms="14735" started-at="2021-10-05T20:39:43 MSK" finished-at="2021-10-05T20:39:58 MSK">
           <params>
             <param index="0">
               <value>
@@ -20,7 +47,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[native]]>
+                <![CDATA[web]]>
               </value>
             </param>
             <param index="2">
@@ -30,119 +57,23 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[]]>
+                <![CDATA[Chrome]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[./src/main/resources/EPAMTestApp.apk]]>
+                <![CDATA[]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="registerToAccountTest()[pri:0, instance:scenarios.nativeMobileTests@887af79]" name="registerToAccountTest" duration-ms="12" started-at="2021-10-05T19:29:10 MSK" description="Register to account test" data-provider="NativeTestDataProvider" finished-at="2021-10-05T19:29:10 MSK">
-          <exception class="org.testng.internal.reflect.MethodMatcherException">
-            <message>
-              <![CDATA[
-[public void scenarios.nativeMobileTests.registerToAccountTest() throws java.lang.IllegalAccessException,java.lang.NoSuchFieldException,java.lang.InstantiationException] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
-Data provider mismatch
-Method: registerToAccountTest([])
-Arguments: [(java.lang.String) 2000.1@mail.ru,(java.lang.String) Alex,(java.lang.String) alex1980]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
-[public void scenarios.nativeMobileTests.registerToAccountTest() throws java.lang.IllegalAccessException,java.lang.NoSuchFieldException,java.lang.InstantiationException] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
-Data provider mismatch
-Method: registerToAccountTest([])
-Arguments: [(java.lang.String) 2000.1@mail.ru,(java.lang.String) Alex,(java.lang.String) alex1980]
-at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:43)
-at org.testng.internal.Parameters.injectParameters(Parameters.java:909)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:34)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(ArrayList.java:1259)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
-at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.internal.reflect.MethodMatcherException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerToAccountTest -->
-        <test-method status="FAIL" signature="signInToAccountTest()[pri:0, instance:scenarios.nativeMobileTests@887af79]" name="signInToAccountTest" duration-ms="0" started-at="2021-10-05T19:29:10 MSK" description="Sign in to account test" data-provider="NativeTestDataProvider" finished-at="2021-10-05T19:29:10 MSK">
-          <exception class="org.testng.internal.reflect.MethodMatcherException">
-            <message>
-              <![CDATA[
-[public void scenarios.nativeMobileTests.signInToAccountTest() throws java.lang.IllegalAccessException,java.lang.NoSuchFieldException,java.lang.InstantiationException,java.lang.InterruptedException] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
-Data provider mismatch
-Method: signInToAccountTest([])
-Arguments: [(java.lang.String) 2000.1@mail.ru,(java.lang.String) Alex,(java.lang.String) alex1980]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
-[public void scenarios.nativeMobileTests.signInToAccountTest() throws java.lang.IllegalAccessException,java.lang.NoSuchFieldException,java.lang.InstantiationException,java.lang.InterruptedException] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
-Data provider mismatch
-Method: signInToAccountTest([])
-Arguments: [(java.lang.String) 2000.1@mail.ru,(java.lang.String) Alex,(java.lang.String) alex1980]
-at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:43)
-at org.testng.internal.Parameters.injectParameters(Parameters.java:909)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:34)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(ArrayList.java:1259)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
-at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.internal.reflect.MethodMatcherException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signInToAccountTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:scenarios.nativeMobileTests@887af79]" name="tearDown" is-config="true" duration-ms="194" started-at="2021-10-05T19:29:10 MSK" finished-at="2021-10-05T19:29:10 MSK">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:scenarios.nativeMobileTests@887af79]" name="tearDown" is-config="true" duration-ms="292" started-at="2021-10-05T20:40:06 MSK" finished-at="2021-10-05T20:40:06 MSK">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- scenarios.nativeMobileTests -->
-    </test> <!-- Native tests -->
-  </suite> <!-- Native mobile testing Suite -->
+    </test> <!-- Web tests -->
+  </suite> <!-- Web mobile testing Suite -->
 </testng-results>

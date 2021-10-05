@@ -1,20 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 13.881 s <<< FAILURE! - in TestSuite
-registerToAccountTest(scenarios.nativeMobileTests)  Time elapsed: 13.498 s  <<< FAILURE!
-org.testng.internal.reflect.MethodMatcherException: 
-
-[public void scenarios.nativeMobileTests.registerToAccountTest() throws java.lang.IllegalAccessException,java.lang.NoSuchFieldException,java.lang.InstantiationException] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
-Data provider mismatch
-Method: registerToAccountTest([])
-Arguments: [(java.lang.String) 2000.1@mail.ru,(java.lang.String) Alex,(java.lang.String) alex1980]
-
-signInToAccountTest(scenarios.nativeMobileTests)  Time elapsed: 13.499 s  <<< FAILURE!
-org.testng.internal.reflect.MethodMatcherException: 
-
-[public void scenarios.nativeMobileTests.signInToAccountTest() throws java.lang.IllegalAccessException,java.lang.NoSuchFieldException,java.lang.InstantiationException,java.lang.InterruptedException] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
-Data provider mismatch
-Method: signInToAccountTest([])
-Arguments: [(java.lang.String) 2000.1@mail.ru,(java.lang.String) Alex,(java.lang.String) alex1980]
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.791 s - in TestSuite
