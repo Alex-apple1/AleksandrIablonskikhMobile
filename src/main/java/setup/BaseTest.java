@@ -53,7 +53,7 @@ public class BaseTest implements IDriver {
                                  String deviceName,
                                  String udid,
                                  String browserName,
-                                 String app
+                                 String app,
                                  String appPackage,
                                  String appActivity,
                                  String bundleId) {
