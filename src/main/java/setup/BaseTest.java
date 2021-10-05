@@ -38,8 +38,7 @@ public class BaseTest implements IDriver {
                       @Optional("") String bundleId
     ) throws Exception {
         System.out.println("Before: app type - " + appType);
-        setAppiumDriver(platformName, deviceName, udid, browserName,
-            app, appPackage, appActivity, bundleId);
+        setAppiumDriver(platformName, deviceName, udid, browserName, app, appPackage, appActivity, bundleId);
         setPageObject(appType, appiumDriver);
     }
 

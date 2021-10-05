@@ -1,38 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="4" total="5" passed="0">
+<testng-results skipped="1" failed="0" ignored="4" total="5" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Web mobile testing Suite" duration-ms="2038" started-at="2021-10-01T07:19:56 MSK" finished-at="2021-10-01T07:19:58 MSK">
+  <suite name="EPAM iOS mobile cloud Web testing Suite" duration-ms="33" started-at="2021-10-05T21:24:38 MSK" finished-at="2021-10-05T21:24:38 MSK">
     <groups>
       <group name="web">
-        <method signature="webMobileTests.simpleWebTest()[pri:0, instance:scenarios.webMobileTests@610694f1]" name="simpleWebTest" class="scenarios.webMobileTests"/>
+        <method signature="webMobileTests.webSearchTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:scenarios.webMobileTests@43814d18]" name="webSearchTest" class="scenarios.webMobileTests"/>
       </group> <!-- web -->
     </groups>
-    <test name="Web tests" duration-ms="2038" started-at="2021-10-01T07:19:56 MSK" finished-at="2021-10-01T07:19:58 MSK">
+    <test name="iOS Cloud Web tests" duration-ms="33" started-at="2021-10-05T21:24:38 MSK" finished-at="2021-10-05T21:24:38 MSK">
       <class name="scenarios.webMobileTests">
-        <test-method status="FAIL" signature="simpleWebTest()[pri:0, instance:scenarios.webMobileTests@610694f1]" name="simpleWebTest" duration-ms="1941" started-at="2021-10-01T07:19:56 MSK" description="Make sure that we&#039;ve opened IANA homepage" finished-at="2021-10-01T07:19:58 MSK">
+        <test-method status="SKIP" signature="webSearchTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:scenarios.webMobileTests@43814d18]" name="webSearchTest" duration-ms="0" started-at="2021-10-05T21:24:38 MSK" description="Google search test" data-provider="WebTestDataProvider" finished-at="2021-10-05T21:24:38 MSK">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at scenarios.webMobileTests.simpleWebTest(webMobileTests.java:26)
+at setup.BaseTest.setAppiumDriver(BaseTest.java:84)
+at setup.BaseTest.setUp(BaseTest.java:41)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(ArrayList.java:1259)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:327)
 at org.testng.SuiteRunner.run(SuiteRunner.java:286)
 at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
@@ -52,14 +44,14 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- simpleWebTest -->
+        </test-method> <!-- webSearchTest -->
       </class> <!-- scenarios.webMobileTests -->
       <class name="scenarios.nativeMobileTests">
-        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:scenarios.nativeMobileTests@7b49cea0]" name="setUp" is-config="true" duration-ms="15171" started-at="2021-10-01T07:19:41 MSK" finished-at="2021-10-01T07:19:56 MSK">
+        <test-method status="FAIL" signature="setUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:scenarios.nativeMobileTests@887af79]" name="setUp" is-config="true" duration-ms="74" started-at="2021-10-05T21:24:38 MSK" finished-at="2021-10-05T21:24:38 MSK">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Android]]>
+                <![CDATA[iOS]]>
               </value>
             </param>
             <param index="1">
@@ -69,28 +61,109 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
             </param>
             <param index="2">
               <value>
-                <![CDATA[emulator-5554]]>
+                <![CDATA[]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[00008101-001608482602001E]]>
               </value>
             </param>
             <param index="4">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="8">
               <value>
                 <![CDATA[]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at setup.BaseTest.setAppiumDriver(BaseTest.java:84)
+at setup.BaseTest.setUp(BaseTest.java:41)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:327)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:scenarios.nativeMobileTests@7b49cea0]" name="tearDown" is-config="true" duration-ms="229" started-at="2021-10-01T07:19:59 MSK" finished-at="2021-10-01T07:19:59 MSK">
+        <test-method status="FAIL" signature="tearDown()[pri:0, instance:scenarios.nativeMobileTests@887af79]" name="tearDown" is-config="true" duration-ms="0" started-at="2021-10-05T21:24:38 MSK" finished-at="2021-10-05T21:24:38 MSK">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at setup.BaseTest.tearDown(BaseTest.java:48)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:351)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- scenarios.nativeMobileTests -->
-    </test> <!-- Web tests -->
-  </suite> <!-- Web mobile testing Suite -->
+    </test> <!-- iOS Cloud Web tests -->
+  </suite> <!-- EPAM iOS mobile cloud Web testing Suite -->
 </testng-results>
