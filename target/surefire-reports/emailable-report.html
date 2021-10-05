@@ -8,14 +8,24 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Web mobile testing Suite</th></tr>
-<tr><td><a href="#t0">Web tests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">2,038</td><td>web</td><td></td></tr>
+<tr><th colspan="8">Native mobile testing Suite</th></tr>
+<tr><td><a href="#t0">Native tests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">40</td><td>native</td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Web mobile testing Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Web tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">scenarios.webMobileTests</td><td><a href="#m0">simpleWebTest</a></td><td rowspan="1">1633061996968</td><td rowspan="1">1941</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Native mobile testing Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Native tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">scenarios.nativeMobileTests</td><td><a href="#m0">registerToAccountTest</a></td><td rowspan="1">1633451350605</td><td rowspan="1">12</td></tr><tr class="failedeven"><td><a href="#m1">signInToAccountTest</a></td><td rowspan="1">1633451350625</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Web tests</h2><h3 id="m0">scenarios.webMobileTests#simpleWebTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at scenarios.webMobileTests.simpleWebTest(webMobileTests.java:26)
+<h2>Native tests</h2><h3 id="m0">scenarios.nativeMobileTests#registerToAccountTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.internal.reflect.MethodMatcherException: 
+[public void scenarios.nativeMobileTests.registerToAccountTest() throws java.lang.IllegalAccessException,java.lang.NoSuchFieldException,java.lang.InstantiationException] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: registerToAccountTest([])
+Arguments: [(java.lang.String) 2000.1@mail.ru,(java.lang.String) Alex,(java.lang.String) alex1980]
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">scenarios.nativeMobileTests#signInToAccountTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.internal.reflect.MethodMatcherException: 
+[public void scenarios.nativeMobileTests.signInToAccountTest() throws java.lang.IllegalAccessException,java.lang.NoSuchFieldException,java.lang.InstantiationException,java.lang.InterruptedException] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: signInToAccountTest([])
+Arguments: [(java.lang.String) 2000.1@mail.ru,(java.lang.String) Alex,(java.lang.String) alex1980]
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
