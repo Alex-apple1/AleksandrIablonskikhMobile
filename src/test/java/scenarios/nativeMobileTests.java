@@ -8,17 +8,17 @@ public class nativeMobileTests extends BaseTest {
 
     @Test(groups = {"native"}, description = "Register to account test",
           dataProvider = "NativeTestDataProvider", dataProviderClass = DataProviders.class)
-    public void registerToAccountTest() throws IllegalAccessException, NoSuchFieldException, InstantiationException {
+    public void registerToAccountTest(String email, String username, String password) throws IllegalAccessException, NoSuchFieldException, InstantiationException {
 
         getPo().getWelement("registrationButton").click();
 
-        getPo().getWelement("registrationEmail").sendKeys("2000.1@mail.ru");
+        getPo().getWelement("registrationEmail").sendKeys(email);
 
-        getPo().getWelement("registrationUserName").sendKeys("Alex");
+        getPo().getWelement("registrationUserName").sendKeys(username);
 
-        getPo().getWelement("registrationPassword").sendKeys("alex1980");
+        getPo().getWelement("registrationPassword").sendKeys(password);
 
-        getPo().getWelement("registrationConfirmPassword").sendKeys("alex1980");
+        getPo().getWelement("registrationConfirmPassword").sendKeys(password);
 
         getPo().getWelement("registrationNewAccountButton").click();
 
@@ -27,12 +27,12 @@ public class nativeMobileTests extends BaseTest {
 
     @Test(groups = {"native"}, description = "Sign in to account test",
           dataProvider = "NativeTestDataProvider", dataProviderClass = DataProviders.class)
-    public void signInToAccountTest()
+    public void signInToAccountTest(String email, String username, String password)
         throws IllegalAccessException, NoSuchFieldException, InstantiationException, InterruptedException {
 
-        getPo().getWelement("loginEmailField").sendKeys("2000.1@mail.ru");
+        getPo().getWelement("loginEmailField").sendKeys(email);
 
-        getPo().getWelement("passwordField").sendKeys("alex1980");
+        getPo().getWelement("passwordField").sendKeys(password);
 
         getPo().getWelement("signInBtn").click();
 
