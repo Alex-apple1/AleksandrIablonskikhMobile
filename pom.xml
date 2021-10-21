@@ -13,6 +13,9 @@
     <testng.version>7.1.0</testng.version>
     <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+    <token>
+      dptQXbUOJy2ECrZRyKFG+qdIvtC0NkJIPTkXRfvZgXkF+c2Y5HkXyhpwO6OXYxbffGlwaHgHg80rHT3kYBLl496sgLud/t5ch3IoILlCMM0K7OygVmwdjF0zvgicKOICjVNtVxojmyFf5+VJ63DczZQT8RiDb1ZCZ5wWH+2RNCCbDKQEk++5J6IazeRDYd89qnrTQUn1NCht7qBsAYGLD9Np8dMEQYRbu4Ul4tCZS4Xb0V7aBaV3hlNu9To7Mbt0wRmQL7AAbElnKbDRcVdWBeB41hztO9fNc7ek6RwuYdlacKKz0ou3f5aLqCC3O2DwTpG8tFN/9NHujptSVDWP9TOl0S/KhKaS9QQCS8GKkOD4lmF0BgKOX9430icULYiJml2rwnr2arkOv1V/OIgU1/pQoTtuuuiEm698X5kOaiNYS/JgT8FnAyoI8Jty6yDmfnTTmgjFv7tOrecHaaKbRXeJ8HpGlLGFUllCzFZLvClIsQfSaJ/jH0PFfTEKBY7/dwQk212R3GJDCv0rdECZrdf6ZEKh1eonKsnO3fENcy2Kvh2LX2Q677myHA4dMFPHXLiJGVAk/JPftvoKn2UU4wPAzE57dLU4CAxkPbENXP8cWP29ytCsxiYYnigcCBUzL8gU4KVJ8kU/P7I/BZzSAM3Hx7CvLINN0vSiRH2pbHJmXSQqp5JT0g9hlFPLiVc4FZ3heUNxPL8RT8NPSmdAZtnGOCRJM8qBDFfvwOti07x6d34f2uDe51agRa44fe+PN9UVBIU/Tif4DCy9bXE31ok4+tDXru6GvhF4qNl90Opx77SeUljhybC5bqVAo7dd6KWPGM1mnBM4fg3g5y2sVGMkrxp5/y3phspDzXWIPa/DLpokTaL4gTgqgd4siTQtP3bp4H/Rk9AolDHswZaFhW0
+    </token>
   </properties>
 
   <dependencies>
@@ -41,7 +44,8 @@
             <suiteXmlFile>${suite.file}</suiteXmlFile>
           </suiteXmlFiles>
           <systemPropertyVariables>
-            <ts.appium>http://localhost:4723/wd/hub</ts.appium>
+            <!--            <ts.appium>http://localhost:4723/wd/hub</ts.appium>-->
+            <ts.appium>https://EPM-TSTF:${token}@mobilecloud.epam.com/wd/hub</ts.appium>
           </systemPropertyVariables>
         </configuration>
       </plugin>
@@ -75,6 +79,46 @@
       </activation>
       <properties>
         <suite.file>./src/test/resources/webTNG.xml</suite.file>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>AndroidCloudNative</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <properties>
+        <suite.file>./src/test/resources/androidCloudNativeTNG.xml</suite.file>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>AndroidCloudWeb</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <properties>
+        <suite.file>./src/test/resources/androidCloudWebTNG.xml</suite.file>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>IOSCloudNative</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <properties>
+        <suite.file>./src/test/resources/iOSCloudNativeTNG.xml</suite.file>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>IOSCloudWeb</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <properties>
+        <suite.file>./src/test/resources/iOSCloudWebTNG.xml</suite.file>
       </properties>
     </profile>
   </profiles>
