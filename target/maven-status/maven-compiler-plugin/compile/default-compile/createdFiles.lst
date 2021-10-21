@@ -4,3 +4,4 @@ setup\IDriver.class
 pageObjects\WebPageObject.class
 setup\BaseTest.class
 pageObjects\PageObject.class
+data\DataProviders.class
