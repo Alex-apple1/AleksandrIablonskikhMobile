@@ -1,14 +1,15 @@
 package scenarios;
 
-import data.DataProviders;
 import org.testng.annotations.Test;
 import setup.BaseTest;
+import setup.DataProviders;
 
 public class NativeMobileTests extends BaseTest {
 
     @Test(groups = {"native"}, description = "Register to account test",
           dataProvider = "NativeTestDataProvider", dataProviderClass = DataProviders.class)
-    public void registerToAccountTest(String email, String username, String password) throws IllegalAccessException, NoSuchFieldException, InstantiationException {
+    public void registerToAccountTest(String email, String username, String password, String pageTitle) throws
+        IllegalAccessException, NoSuchFieldException, InstantiationException {
 
         getPo().getWelement("registrationButton").click();
 
@@ -23,12 +24,6 @@ public class NativeMobileTests extends BaseTest {
         getPo().getWelement("registrationNewAccountButton").click();
 
         System.out.println("Registration is done");
-    }
-
-    @Test(groups = {"native"}, description = "Sign in to account test",
-          dataProvider = "NativeTestDataProvider", dataProviderClass = DataProviders.class)
-    public void signInToAccountTest(String email, String password)
-        throws IllegalAccessException, NoSuchFieldException, InstantiationException, InterruptedException {
 
         getPo().getWelement("loginEmailField").sendKeys(email);
 
@@ -38,7 +33,7 @@ public class NativeMobileTests extends BaseTest {
 
         System.out.println("Sign in is done");
 
-        getPo().getWelement("addNewExpenseButton").isDisplayed();
+        assert (getPo().getWelement("pageTitle").getText().equals(pageTitle));
 
         System.out.println("Assertion is done");
     }

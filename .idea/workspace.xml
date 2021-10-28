@@ -5,10 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb41a4c6-1258-4745-8dd8-a24d9f3be6e0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/NativeAndroidTestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/WebTestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/setup/DataProviders.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/NativeAndroidTestsData.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/WebTestsData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01-Oct-21_12_06__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01-Oct-21_12_06__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01-Oct-21_12_06__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01-Oct-21_12_06__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_30-Sep-21_17_39__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_30-Sep-21_17_39__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobileTaTrainingV2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mobileTaTrainingV2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/DataProviders.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/setup/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/setup/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/setup/IDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/setup/IDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/scenarios/NativeMobileTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/scenarios/NativeMobileTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/scenarios/WebMobileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/scenarios/WebMobileTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,8 +71,11 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IdeaProjects\mobileTaTrainingV2FinalCopy\src\test\resources" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\mobileTaTrainingV2FinalCopy\src\main\java\setup" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.WebMobileTest">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -65,6 +83,23 @@
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NativeMobileTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mobileTaTrainingV2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="scenarios.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="scenarios" />
+      <option name="MAIN_CLASS_NAME" value="scenarios.NativeMobileTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -86,6 +121,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.WebMobileTest" />
+        <item itemvalue="TestNG.NativeMobileTests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

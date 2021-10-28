@@ -13,11 +13,11 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTest implements IDriver {
 
-    private static AppiumDriver appiumDriver; // singleton
-    IPageObject po;
+    private static AppiumDriver <? extends WebElement> appiumDriver; // singleton
+    static IPageObject po;
 
     @Override
-    public AppiumDriver getDriver() { return appiumDriver; }
+    public AppiumDriver <? extends WebElement> getDriver() { return appiumDriver; }
 
     public IPageObject getPo() {
         return po;
@@ -26,7 +26,7 @@ public class BaseTest implements IDriver {
     @Parameters({"platformName","appType","deviceName","browserName","app"})
     @BeforeSuite(alwaysRun = true)
     public void setUp(String platformName, String appType, String deviceName, @Optional("") String browserName, @Optional("") String app) throws Exception {
-        System.out.println("Before: app type - "+appType);
+        System.out.println("Before: app type - " + appType);
         setAppiumDriver(platformName, deviceName, browserName, app);
         setPageObject(appType, appiumDriver);
 
@@ -60,7 +60,7 @@ public class BaseTest implements IDriver {
 
     }
 
-    protected void setPageObject(String appType, AppiumDriver appiumDriver) throws Exception {
+    protected void setPageObject(String appType, AppiumDriver <? extends WebElement> appiumDriver) throws Exception {
         po = new PageObject(appType, appiumDriver);
     }
 

@@ -1,19 +1,23 @@
 package scenarios;
 
-
-import data.DataProviders;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import setup.BaseTest;
+import setup.DataProviders;
+
+import static org.testng.Assert.assertTrue;
+
+import java.util.Objects;
 
 public class WebMobileTest extends BaseTest {
 
     @Test(groups = {"web"}, description = "Google search test",
           dataProvider = "WebTestDataProvider", dataProviderClass = DataProviders.class)
-    public void webSearchTest(String appType, String url, String pageTitle, String searchWord) throws Exception {
+    public void webSearchTest(String url, String pageTitle, String searchWord) throws Exception {
 
         getDriver().get(url);
 
@@ -22,13 +26,13 @@ public class WebMobileTest extends BaseTest {
 
         assert ((WebDriver) getDriver()).getTitle().equals(pageTitle) : "This is not Google page";
 
-        setPageObject(appType, getDriver());
-
         getPo().getWelement("googleSearchField").sendKeys(searchWord, Keys.ENTER);
 
-        System.out.println(getPo().getWelements("googleSearchResults").get(0).getText());
-
-        assert (getPo().getWelements("googleSearchResults").get(0).getText().contains(searchWord));
+        assertTrue(getPo().getWelements("searchResults").stream()
+                            .map(WebElement::getText)
+                            .filter(Objects::nonNull)
+                            .map(String::trim)
+                            .anyMatch(text -> text.toLowerCase().contains(searchWord.toLowerCase())));
 
         System.out.println("Google search is done");
     }
