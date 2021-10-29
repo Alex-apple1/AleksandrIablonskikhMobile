@@ -1,0 +1,12 @@
+# Default ignored files
+*.tmp
+
+# IntelliJ
+workspace.xml
+
+# Maven
+target
+*.iml
+
+.idea
+/.idea/
