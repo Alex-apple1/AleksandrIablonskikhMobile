@@ -28,11 +28,14 @@ public class NativePageObject  {
     @AndroidFindBy(id = "platkovsky.alexey.epamtestapp:id/login_pwd")
     WebElement passwordField;
 
-    @AndroidFindBy(id = "platkovsky.alexey.epamtestapp:id/action_bar")
-    WebElement assertName;
+//    @AndroidFindBy(id = "platkovsky.alexey.epamtestapp:id/action_bar")
+//    WebElement assertName;
 
-    @AndroidFindBy(id = "platkovsky.alexey.epamtestapp:id/add_new_expense")
-    WebElement addNewExpenseButton;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='BudgetActivity']")
+    WebElement pageTitle;
+
+//    @AndroidFindBy(id = "platkovsky.alexey.epamtestapp:id/add_new_expense")
+//    WebElement addNewExpenseButton;
 
     public NativePageObject(AppiumDriver appiumDriver) {
         PageFactory.initElements( new AppiumFieldDecorator(appiumDriver), this);

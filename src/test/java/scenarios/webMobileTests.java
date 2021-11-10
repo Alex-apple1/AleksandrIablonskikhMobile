@@ -31,7 +31,7 @@ public class webMobileTests extends BaseTest {
                           .map(WebElement::getText)
                           .filter(Objects::nonNull)
                           .map(String::trim)
-                          .anyMatch(text -> text.toLowerCase().contains(searchWord.toLowerCase())));
+                          .allMatch(text -> text.toLowerCase().contains(searchWord.toLowerCase())));
 
         System.out.println("Google search is done");
     }
