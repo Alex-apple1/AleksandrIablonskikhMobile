@@ -4,10 +4,9 @@ import org.testng.annotations.Test;
 import setup.BaseTest;
 import setup.DataProviders;
 
-public class nativeMobileTests extends BaseTest {
-
+public class nativeIOSTests extends BaseTest {
     @Test(groups = {"native"}, description = "Register to account test",
-          dataProvider = "NativeTestDataProvider", dataProviderClass = DataProviders.class)
+          dataProvider = "NativeIOSTestDataProvider", dataProviderClass = DataProviders.class)
     public void registerToAccountTest(String email, String username, String password, String pageTitle) throws
         IllegalAccessException, NoSuchFieldException, InstantiationException {
 
@@ -37,4 +36,5 @@ public class nativeMobileTests extends BaseTest {
 
         System.out.println("Assertion is done");
     }
+
 }

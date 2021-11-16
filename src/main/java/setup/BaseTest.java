@@ -38,7 +38,8 @@ public class BaseTest implements IDriver {
                       @Optional("") String bundleId
     ) throws Exception {
         System.out.println("Before: app type - " + appType);
-        setAppiumDriver(platformName, deviceName, udid, browserName, app, appPackage, appActivity, bundleId);
+        setAppiumDriver(platformName, deviceName, udid, browserName, app,
+            appPackage, appActivity, bundleId);
         setPageObject(appType, appiumDriver);
     }
 
@@ -74,10 +75,21 @@ public class BaseTest implements IDriver {
 
         capabilities.setCapability("bundleId", bundleId);
 
-        try {
-            appiumDriver = new AppiumDriver(new URL(System.getProperty("ts.appium")), capabilities);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
+        if(cloud){
+            try {
+                String tokenEncoded = java.net.URLEncoder
+                    .encode(System.getProperty("token"), "UTF-8");
+                appiumDriver = new AppiumDriver<>(new URL("https://EPM-TSTF:"
+                    + tokenEncoded + "@mobilecloud.epam.com/wd/hub"), capabilities);
+            } catch (MalformedURLException | UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+        } else {
+            try {
+                appiumDriver = new AppiumDriver<>(new URL("http://localhost:4723/wd/hub"), capabilities);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
         }
 
         // Timeouts tuning
