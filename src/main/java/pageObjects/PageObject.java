@@ -11,7 +11,7 @@ public class PageObject implements IPageObject {
 
     Object somePageObject; // it should be set of web page or EPAM Test App WebElements
 
-    public PageObject(String appType, AppiumDriver appiumDriver) throws Exception {
+    public PageObject(String appType, AppiumDriver <? extends WebElement> appiumDriver) throws Exception {
 
         System.out.println("Current app type: " + appType);
         switch (appType) {
@@ -27,16 +27,16 @@ public class PageObject implements IPageObject {
     }
 
     @Override
-    public WebElement getWelement(String weName) throws NoSuchFieldException, IllegalAccessException {
+    public WebElement getWebElement(String webElementName) throws NoSuchFieldException, IllegalAccessException {
         // use reflection technique
-        Field field = somePageObject.getClass().getDeclaredField(weName);
+        Field field = somePageObject.getClass().getDeclaredField(webElementName);
         field.setAccessible(true);
         return (WebElement) field.get(somePageObject);
     }
 
     @Override
-    public List<WebElement> getWelements(String weNames) throws NoSuchFieldException, IllegalAccessException {
-        Field field = somePageObject.getClass().getDeclaredField(weNames);
+    public List<WebElement> getWebElements(String webElementName) throws NoSuchFieldException, IllegalAccessException {
+        Field field = somePageObject.getClass().getDeclaredField(webElementName);
         field.setAccessible(true);
         return (List<WebElement>) field.get(somePageObject);
     }

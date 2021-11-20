@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import setup.BaseTest;
 import setup.DataProviders;
 
-public class webMobileTests extends BaseTest {
+public class androidWebTests extends BaseTest {
 
     @Test(groups = {"web"}, description = "Google search test",
           dataProvider = "WebTestDataProvider", dataProviderClass = DataProviders.class)
@@ -25,9 +25,9 @@ public class webMobileTests extends BaseTest {
 
         assert ((WebDriver) getDriver()).getTitle().equals(pageTitle) : "This is not Google page";
 
-        getPo().getWelement("googleSearchField").sendKeys(searchWord, Keys.ENTER);
+        getPo().getWebElement("googleSearchField").sendKeys(searchWord, Keys.ENTER);
 
-        assertTrue(getPo().getWelements("searchResults").stream()
+        assertTrue(getPo().getWebElements("searchResults").stream()
                           .map(WebElement::getText)
                           .filter(Objects::nonNull)
                           .map(String::trim)

@@ -1,6 +1,14 @@
 package setup;
 
+import static java.lang.String.format;
+
 import io.appium.java_client.AppiumDriver;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
+import java.util.Properties;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.*;
 import pageObjects.PageObject;
@@ -9,11 +17,13 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
+import utils.PropertyReader;
 
 public class BaseTest implements IDriver {
 
     private static AppiumDriver appiumDriver; // singleton
     IPageObject po;
+    protected static String API_KEY;
 
     @Override
     public AppiumDriver getDriver() {
@@ -25,7 +35,7 @@ public class BaseTest implements IDriver {
     }
 
     @Parameters({"platformName", "appType", "deviceName", "udid", "browserName",
-        "app", "appPackage", "appActivity", "bundleId"})
+        "app", "appPackage", "appActivity", "bundleId", "cloud"})
     @BeforeSuite(alwaysRun = true)
     public void setUp(String platformName,
                       String appType,
@@ -35,11 +45,12 @@ public class BaseTest implements IDriver {
                       @Optional("") String app,
                       @Optional("") String appPackage,
                       @Optional("") String appActivity,
-                      @Optional("") String bundleId
+                      @Optional("") String bundleId,
+                      @Optional("") boolean cloud
     ) throws Exception {
         System.out.println("Before: app type - " + appType);
         setAppiumDriver(platformName, deviceName, udid, browserName, app,
-            appPackage, appActivity, bundleId);
+            appPackage, appActivity, bundleId, cloud);
         setPageObject(appType, appiumDriver);
     }
 
@@ -56,7 +67,9 @@ public class BaseTest implements IDriver {
                                  String app,
                                  String appPackage,
                                  String appActivity,
-                                 String bundleId) {
+                                 String bundleId,
+                                 boolean cloud
+    ) throws IOException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         //mandatory Android capabilities
         capabilities.setCapability("platformName", platformName);
@@ -75,10 +88,24 @@ public class BaseTest implements IDriver {
 
         capabilities.setCapability("bundleId", bundleId);
 
-        if(cloud){
+        //        if(platformName.equals("iOS")) capabilities.setCapability("automationName","XCUITest");
+
+        //        Properties props = new PropertyReader().readPropertiesFromFile("test.properties");
+        //        API_KEY = URLEncoder.encode(props.getProperty("apiKey"), StandardCharsets.UTF_8.name());
+        //
+        //        try {
+        //            appiumDriver = new AppiumDriver(
+        //                //                new URL(format("https://EPM-TSTF:%s@mobilecloud.epam.com/wd/hub", API_KEY)), capabilities);
+        //                new URL("https://EPM-TSTF:"
+        //                    + API_KEY + "@mobilecloud.epam.com/wd/hub"), capabilities);
+        //            //            appiumDriver = new AppiumDriver<>(new URL(System.getProperty("ts.appium")), capabilities);
+        //        } catch (MalformedURLException e) {
+        //            e.printStackTrace();
+        //        }
+        if (cloud) {
             try {
                 String tokenEncoded = java.net.URLEncoder
-                    .encode(System.getProperty("token"), "UTF-8");
+                    .encode(System.getProperty("token"), StandardCharsets.UTF_8.name());
                 appiumDriver = new AppiumDriver<>(new URL("https://EPM-TSTF:"
                     + tokenEncoded + "@mobilecloud.epam.com/wd/hub"), capabilities);
             } catch (MalformedURLException | UnsupportedEncodingException e) {

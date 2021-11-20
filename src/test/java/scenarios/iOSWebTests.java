@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import setup.BaseTest;
 import setup.DataProviders;
 
-public class webIOSTests extends BaseTest {
+public class iOSWebTests extends BaseTest {
 
     @Test(groups = {"web"}, description = "Google search test",
           dataProvider = "WebTestDataProvider", dataProviderClass = DataProviders.class)
@@ -20,13 +20,13 @@ public class webIOSTests extends BaseTest {
 
         assert ((WebDriver) getDriver()).getTitle().equals(pageTitle) : "This is not Google page";
 
-        getPo().getWelement("googleSearchField").sendKeys(searchWord);
-        getPo().getWelement("googleSearchField").submit();
+        getPo().getWebElement("googleSearchField").sendKeys(searchWord);
+        getPo().getWebElement("googleSearchField").submit();
 
         new WebDriverWait(getDriver(), 50).until(
             wd -> ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
 
-        assert (getPo().getWelements("searchResults").get(1).getText().contains(searchWord));
+        assert (getPo().getWebElements("searchResults").get(1).getText().contains(searchWord));
 
         System.out.println("Google search is done");
 
