@@ -9,7 +9,7 @@ import setup.DataProviders;
 
 public class iOSWebTests extends BaseTest {
 
-    @Test(groups = {"web"}, description = "Google search test",
+    @Test(groups = {"webIOS"}, description = "Google search test",
           dataProvider = "WebTestDataProvider", dataProviderClass = DataProviders.class)
     public void webSearchTest(String url, String pageTitle, String searchWord) throws Exception {
 

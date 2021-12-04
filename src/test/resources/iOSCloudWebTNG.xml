@@ -8,7 +8,7 @@
   <test name="iOS Cloud Web tests">
     <groups>
       <run>
-        <include name="web"/>
+        <include name="webIOS"/>
       </run>
     </groups>
     <packages>

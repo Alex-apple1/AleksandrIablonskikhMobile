@@ -14,7 +14,7 @@
     <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     <token>
-      HERE-SHOULD-BE-YOUR-TOKEN!!!
+      BcQDUE5byMjoib2Ze6WCIKmdGKeU7hrkNzwA3XDvmjD1hzoJr3kyDsWzZpIfqlFjdhUMjBJtuWwEjoui+uBKPhpy20cPdqPTjcIjopnuhSwXQSdo9ORcfWrJIT1B0PxYiHCxC8b3IeIKKBvbO8DeDzBe8gfWc3uuRY0E9bbGazwOh+KUbFXtAxL54KVoZ5hlu/1L54pGCG4PPv+mQEcsTz5pl0alwOAxq4ScdKb5e1uBWgTXktqpan0V3yY+lH7s7HAnc4PAjoLHajUVPI46Z8OGZJnm9FjEu2QbWVGHksZ2x/EJuZMIzMX3jCU5MG+6P+5SjCF0IvRywwQuZ3QVZSqkjd1ASOegBZfrkjkzI5nqFeydkkryiiXmivJ7Rtfph4xB5QH4at9G/myNSeIpNaLRtFjT/SOOrj1EyFoSJWAIHGEWdJW+qDMJE7ZHU4Vu+9nPEkE844EXM16igt9bfZ92r/kPqpEq9AbqiS9I+NHZhfvKeO4ylfd06S8R80DH5xjwQgJIhqAtZNim80x0Q4hp+UjuvCsy4+TIstGfPf43HaXEblElf1qzSMDws1X7Xajob2dfGC/hUEsyRVkwUeVSjKAhKWoggT6SFahOKqHci6o8Y8XHSNudvNC+k4oj+dG6WgsDM8mA7hRFjNhx6mXfePjvGsWaCFIJDrD2trP/8Zy4WrO31xzVhiEZ9lR4otRAuPvFgnkT/u7PASq+rHq6dLmBy4MaPh9nfsuvKNHO+6cnqk0l/N6ockww1OfTe0DShPR0I8S6FpmSJY5kW3fiPK3Tc9jMU0l+s/7LnGYGBf0BEOhCN8HN2P1Yh2okBRJFoY1S2IqsfT1LWO/UmpP2sI5+0cyWLnRYv/D2zhYD5JRYEKeQzad4FHLqTRYI2oQoZny+3H5UEVl0H6XzvVY
     </token>
     <lombok.version>1.18.20</lombok.version>
   </properties>

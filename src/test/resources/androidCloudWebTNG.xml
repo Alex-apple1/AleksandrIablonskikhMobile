@@ -2,8 +2,8 @@
 <suite name="EPAM Android mobile cloud Web testing Suite">
     <parameter name="cloud" value="true"/>
     <parameter name="appType" value="web"/>
-    <parameter name="deviceName" value="Samsung Galaxy S8"/>
-    <!--  <parameter name="udid" value="ce11171b791f6c0603"/>-->
+    <parameter name="deviceName" value="Samsung Galaxy Note 10"/>
+      <parameter name="udid" value="R58MA036ARL"/>
     <parameter name="platformName" value="Android"/>
     <parameter name="browserName" value="Chrome"/>
     <test name="Android Cloud Web tests">

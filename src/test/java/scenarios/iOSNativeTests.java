@@ -5,7 +5,8 @@ import setup.BaseTest;
 import setup.DataProviders;
 
 public class iOSNativeTests extends BaseTest {
-    @Test(groups = {"native"}, description = "Register to account test",
+
+    @Test(groups = {"nativeIOS"}, description = "Register to account test",
           dataProvider = "NativeIOSTestDataProvider", dataProviderClass = DataProviders.class)
     public void registerToAccountTest(String email, String username, String password, String pageTitle) throws
         IllegalAccessException, NoSuchFieldException, InstantiationException {

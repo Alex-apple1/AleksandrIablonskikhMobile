@@ -2,11 +2,11 @@
 <suite name="Native Android mobile testing Suite for EPAM Mobile Cloud">
   <parameter name="cloud" value="true"/>
   <parameter name="appType" value="native"/>
-  <parameter name="deviceName" value="Samsung Galaxy S8"/>
-  <!--  <parameter name="udid" value="ce11171b791f6c0603"/>-->
+  <parameter name="deviceName" value="Samsung Galaxy Note 10"/>
+    <parameter name="udid" value="R58MA036ARL"/>
   <parameter name="platformName" value="Android"/>
   <parameter name="appPackage" value="platkovsky.alexey.epamtestapp"/>
-  <parameter name="addActivity" value="activities.LoginActivity"/>
+  <parameter name="appActivity" value="activities.LoginActivity"/>
   <test name="Android Cloud Native tests">
     <groups>
       <run>
