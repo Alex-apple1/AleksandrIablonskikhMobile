@@ -50,7 +50,7 @@
             <suiteXmlFile>${suite.file}</suiteXmlFile>
           </suiteXmlFiles>
           <systemPropertyVariables>
-<!--            <ts.appium>https://EPM-TSTF:${token}@mobilecloud.epam.com/wd/hub</ts.appium>-->
+            <ts.appium>https://EPM-TSTF:${token}@mobilecloud.epam.com/wd/hub</ts.appium>
           </systemPropertyVariables>
         </configuration>
       </plugin>
