@@ -4,10 +4,12 @@ import org.testng.annotations.Test;
 import setup.BaseTest;
 import setup.DataProviders;
 
-public class iOSNativeTests extends BaseTest {
+public class cloudNativeTests extends BaseTest {
 
-    @Test(groups = {"nativeIOS"}, description = "Register to account test",
-          dataProvider = "NativeIOSTestDataProvider", dataProviderClass = DataProviders.class)
+    @Test(groups = {"native"},
+          description = "Register to account test",
+          dataProvider = "NativeTestDataProvider",
+          dataProviderClass = DataProviders.class)
     public void registerToAccountTest(String email, String username, String password, String pageTitle) throws
         IllegalAccessException, NoSuchFieldException, InstantiationException {
 
@@ -33,9 +35,8 @@ public class iOSNativeTests extends BaseTest {
 
         System.out.println("Sign in is done");
 
-        assert (getPo().getWebElement("pageTitle").getText().equals(pageTitle));
+        assert (getPo().getWebElement("expensesList").isDisplayed());
 
         System.out.println("Assertion is done");
     }
-
 }

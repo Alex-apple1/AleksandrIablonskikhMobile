@@ -1,6 +1,5 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="EPAM iOS mobile cloud Web testing Suite">
-  <parameter name="cloud" value="true"/>
   <parameter name="appType" value="web"/>
   <parameter name="udid" value="00008101-001608482602001E"/>
   <parameter name="platformName" value="iOS"/>
@@ -8,7 +7,7 @@
   <test name="iOS Cloud Web tests">
     <groups>
       <run>
-        <include name="webIOS"/>
+        <include name="web"/>
       </run>
     </groups>
     <packages>

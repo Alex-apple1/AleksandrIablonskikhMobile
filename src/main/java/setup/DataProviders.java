@@ -10,19 +10,10 @@ import org.testng.annotations.DataProvider;
 
 public class DataProviders {
 
-    @DataProvider(name = "NativeIOSTestDataProvider")
-    public static Object[][] NativeIOSTestDataProvider() throws FileNotFoundException {
-        Reader reader = new FileReader("src/test/resources/NativeIOSTestsData.json");
-        NativeAndroidTestsData data = new Gson().fromJson(reader, NativeAndroidTestsData.class);
-
-        return new Object[][] {
-            {data.getEmail(), data.getUsername(), data.getPassword(), data.getPageTitle()},
-        };
-    }
 
     @DataProvider(name = "NativeTestDataProvider")
     public static Object[][] NativeTestDataProvider() throws FileNotFoundException {
-        Reader reader = new FileReader("src/test/resources/NativeAndroidTestsData.json");
+        Reader reader = new FileReader("src/test/resources/NativeTestsData.json");
         NativeAndroidTestsData data = new Gson().fromJson(reader, NativeAndroidTestsData.class);
 
         return new Object[][] {

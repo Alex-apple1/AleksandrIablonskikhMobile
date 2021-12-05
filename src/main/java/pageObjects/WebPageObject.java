@@ -12,6 +12,7 @@ public class WebPageObject  {
 
     @FindBy(xpath = "//*[@name='q']")
     WebElement googleSearchField;
+
     @FindBy(xpath = "//div[@id='rso']/div")
     List<WebElement> googleSearchResults;
 

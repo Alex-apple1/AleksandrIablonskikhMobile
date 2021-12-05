@@ -45,15 +45,13 @@ public class NativePageObject  {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeSecureTextField[@value='Required']")
     WebElement passwordField;
 
-    //    @AndroidFindBy(id = "platkovsky.alexey.epamtestapp:id/action_bar")
-    //    WebElement assertName;
-
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='BudgetActivity']")
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@value='Budget']")
     WebElement pageTitle;
 
-    //    @AndroidFindBy(id = "platkovsky.alexey.epamtestapp:id/add_new_expense")
-    //    WebElement addNewExpenseButton;
+    @AndroidFindBy(id = "platkovsky.alexey.epamtestapp:id/expenses_list")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@value='Budget']")
+    WebElement expensesList;
 
     public NativePageObject(AppiumDriver appiumDriver) {
         PageFactory.initElements( new AppiumFieldDecorator(appiumDriver), this);

@@ -73,7 +73,7 @@
         <activeByDefault>false</activeByDefault>
       </activation>
       <properties>
-        <suite.file>.src/test/resources/nativeTNG.xml</suite.file>
+        <suite.file>./src/test/resources/nativeTNG.xml</suite.file>
       </properties>
     </profile>
 
@@ -103,7 +103,7 @@
         <activeByDefault>false</activeByDefault>
       </activation>
       <properties>
-        <suite.file>./src/test/resources/androidCloudWebTNG.xml</suite.file>
+        <suite.file>.//test/resources/androidCloudWebTNG.xml</suite.file>
       </properties>
     </profile>
 
